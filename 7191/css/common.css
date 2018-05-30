@@ -1,0 +1,435 @@
+/*
+Theme Name: decentra Framework Template
+Description: Themed developed in Oct 2017, new clean and simplified layout.
+Author: louis xie
+Version: 1.0
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f0f2f5;
+  color: #333;
+  font-size: 14px;
+  font-family: PingFang SC, '微软雅黑', sans-serif;
+}
+td,
+th,
+caption {
+  font-size: 14px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+a {
+  padding: 0;
+  color: #333;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+a:hover {
+  text-decoration: none !important;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: #0046f7;
+}
+em {
+  font-style: normal;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+img {
+  border: none;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+input,
+textarea,
+select,
+button {
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: normal;
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+}
+video {
+  object-fit: contain;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.box {
+  width: 1200px;
+  margin: 0 auto;
+}
+.nav > li > a:focus,
+.nav > li > a:hover {
+  background: transparent;
+}
+.headerCont {
+  padding-top: 10px;
+  height: 60px;
+  line-height: 50px;
+  background: #fff;
+  font-size: 16px;
+}
+.headerCont .nav {
+  margin-left: 65px;
+}
+.headerCont .nav li {
+  position: relative;
+  float: left;
+  margin-right: 50px;
+}
+.headerCont .nav li a {
+  padding: 0;
+}
+.headerCont .nav li.active a,
+.headerCont .nav li:hover a {
+  color: #0046f7;
+}
+.headerCont .nav li.active:before,
+.headerCont .nav li:hover:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #0046f7;
+}
+.headerCont a {
+  margin-left: 5px;
+}
+.headerCont .bt-r .mbhide {
+  display: inline-block;
+  width: 82px;
+  height: 30px;
+  border: 1px solid #0046f7;
+  border-radius: 100px;
+  line-height: 28px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #0046f7;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.headerCont .bt-r .mbhide img {
+  margin-right: 2px;
+  position: relative;
+  top: -1px;
+  width: 13px;
+}
+.headerCont .search-box {
+  position: relative;
+  margin-top: 6px;
+  float: right;
+  width: 270px;
+  height: 38px;
+  line-height: 36px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+.headerCont .search-box input {
+  position: absolute;
+  top: 1px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 60px;
+  height: 36px;
+}
+.headerCont .search-box .search-btn {
+  right: 15px;
+}
+.headerCont .search-box .search-btn img {
+  position: relative;
+  top: -2px;
+  height: 20px;
+}
+.footer-wrap {
+  background: #000b28;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+.footer-wrap .infor-items {
+  float: left;
+}
+.footer-wrap .infor-items p {
+  line-height: 49px;
+}
+.footer-wrap .infor-items p a {
+  color: #fff;
+}
+.footer-wrap .infor-items p a:hover {
+  color: #0046f7;
+}
+.footer-wrap .cooperation {
+  position: relative;
+  float: left;
+  width: 640px;
+  padding-left: 80px;
+  box-sizing: border-box;
+  line-height: 45px;
+  margin-left: 130px;
+}
+.footer-wrap .cooperation p {
+  position: absolute;
+  left: 0;
+  color: #fff;
+}
+.footer-wrap .cooperation a {
+  color: #fff;
+  margin-right: 20px;
+  white-space: nowrap;
+  opacity: .8;
+}
+.footer-wrap .cooperation a:hover {
+  color: #0046f7;
+}
+.footer-wrap .qr-code {
+  float: right;
+}
+.footer-wrap .qr-code img {
+  width: 120px;
+  height: 120px;
+}
+.footer-wrap .copy {
+  text-align: center;
+  color: #fff;
+  opacity: 0.6;
+  margin-top: 40px;
+  font-size: 12px;
+}
+@media (max-width: 560px) {
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 9;
+  }
+  .headerCont {
+    position: relative;
+    z-index: 999;
+  }
+  .headerCont .nav-list {
+    top: 60px;
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    background: #fff;
+    z-index: 99;
+    width: 100%;
+    left: 0;
+    transition: all .6s;
+  }
+  .headerCont .nav-list ul {
+    margin-left: 0;
+    border-top: 1px solid #eee;
+  }
+  .headerCont .nav-list li {
+    width: 100%;
+    float: none;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .headerCont .nav-list li.active:before,
+  .headerCont .nav-list li:hover:before {
+    display: none;
+  }
+  .headerCont .nav-list li a {
+    color: #0046f7;
+    margin-left: 0;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    line-height: 40px;
+  }
+  .headerCont .bt-r .mbhide {
+    height: 26px;
+    line-height: 24px;
+    font-size: 13px;
+    width: 70px;
+  }
+  .headerCont .bt-r a {
+    font-size: 13px;
+  }
+  .headerCont .toggle-btn {
+    float: right;
+    height: 50px;
+    width: 50px;
+    margin-right: -10px;
+    background: transparent;
+    margin-left: 10px;
+  }
+  .headerCont .toggle-btn .nly {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #000;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .headerCont .toggle-btn .nly:before {
+    position: absolute;
+    content: '';
+    z-index: 999;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    top: -10px;
+    left: 0;
+    transition: all .5s;
+  }
+  .headerCont .toggle-btn .nly:after {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    content: ' ';
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.5s;
+  }
+  .headerCont .search-box {
+    display: none;
+  }
+  .header.active .headerCont .toggle-btn .nly {
+    background: transparent;
+  }
+  .header.active .headerCont .toggle-btn .nly:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0;
+  }
+  .header.active .headerCont .toggle-btn .nly:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .header.active .headerCont .nav-list {
+    height: 240px;
+  }
+  .footer-wrap .infor-items {
+    float: none;
+    text-align: center;
+  }
+  .footer-wrap .infor-items p {
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    line-height: 30px;
+  }
+  .footer-wrap .cooperation {
+    display: none;
+    width: 100%;
+    float: none;
+    padding-left: 70px;
+    margin-left: 0;
+    font-size: 12px;
+    line-height: 30px;
+  }
+  .footer-wrap .qr-code {
+    margin-top: 10px;
+    float: none;
+    text-align: center;
+  }
+  .footer-wrap .qr-code img {
+    width: 100px;
+    height: 100px;
+  }
+  .footer-wrap .copy {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 320px) {
+  .headerCont a img {
+    width: 6.666667rem;
+  }
+}
+/*# sourceMappingURL=common.css.map */
