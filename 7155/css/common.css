@@ -1,0 +1,265 @@
+/*auth:kongxin
+date:'2018-5-11'
+projectName:hospitalCtrl
+wechat:zyq9613*/
+
+@charset "utf-8";
+/* @base */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,\5b8b\4f53;}
+input,select,textarea{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+th{text-align:inherit;}
+fieldset,img,a img{border:0;}
+iframe{display:block;}
+abbr,acronym{border:0;font-variant:normal;}
+del{text-decoration:line-through;}
+address,caption,cite,code,dfn,em,th,var{font-style:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+q:before,q:after{content:'';}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+ins,a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{vertical-align: middle;}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clearfix{*zoom:1;}
+.hide{display:none;}
+.fl{float:left;}
+.fr{float:right;}
+
+
+
+
+/*此处设置不管页面内容多少，footer始终在底部显示*/
+html,body{
+	height: 100%;
+	
+}
+#container{
+	width: 100%;
+	min-height: 100%;
+	overflow-x: hidden;
+	position: relative;
+	/*padding-bottom: 45px; !*此处要和底部footer的高度保持一致*!*/
+}
+
+.public-footer{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 45px;/*footer一定要给固定高度*/
+	overflow: hidden;
+}
+/*此处设置不管页面内容多少，footer始终在底部显示*/
+
+
+
+
+/*使用border-box盒子模型，如个别元素不适用，可在单个元素上修改为 content-box*/
+*{
+	-moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box; 
+    -o-box-sizing: border-box; 
+    -ms-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+/*使用border-box盒子模型，如个别元素不适用，可在单个元素上修改为 content-box*/
+
+
+/*public-header begin*/
+
+
+.kx-box{
+  width: 1200px;
+  margin:0 auto;
+  position: relative;
+}
+.kx-header{
+  width: 100%;
+  height: 60px;/*示例导航高度为60px,可根据需求修改*/
+  background: #000;
+}
+.kx-header .kx-logo{
+  display: block;
+  float: left;
+  height: 60px;
+  line-height: 60px;/*此处同导航高度，可根据需求修改*/
+  display: flex;
+}
+
+.kx-header .kx-nav{
+  float: right;
+  padding-left: 0;
+}
+.kx-header .kx-nav > li{
+  float: left;
+  list-style: none;
+  position: relative;
+  margin: 0 10px;
+}
+.kx-header .kx-nav > li > a{
+  display: block;
+  line-height: 60px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  width: 80px;
+  text-align: center;
+}
+
+.kx-header .kx-nav > li > a:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  background: #3cc8b4;
+  width: 100%;
+  height: 4px;
+
+  
+/*此处为CSS3动画代码 为导航hover动画 */
+  -webkit-transform: scale(0,1);
+  -ms-transform: scale(0,1);
+  -o-transform: scale(0,1);
+  transform: scale(0,1);
+  -webkit-transition: all .75s;
+  -o-transition: all .75s;
+  transition: all .75s;
+}
+
+.kx-header .kx-nav > li > a:hover:after{
+  -webkit-transform: scale(1,1);
+  -ms-transform: scale(1,1);
+  -o-transform: scale(1,1);
+  transform: scale(1,1);
+}
+.kx-header .kx-nav > li > .kx-active:after{
+  -webkit-transform: scale(1,1);
+  -ms-transform: scale(1,1);
+  -o-transform: scale(1,1);
+  transform: scale(1,1);
+}
+
+.kx-header .kx-nav li .kx-slide-btn{
+  line-height: 60px;
+cursor: pointer;
+}
+.kx-header .kx-nav li .kx-slide-btn img{
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.kx-header .kx-nav li .kx-slide-btn span{
+  font-size: 16px;
+color: #fff;
+}
+
+.kx-header .kx-nav li .kx-header-slide{
+  width: 150px;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+  box-shadow: 0 0 10px 2px rgba(0,0,0,.2);
+  padding: 0 10px;
+  padding: 10px 0;
+  border-radius: 0 0 5px 5px;
+  display: none;
+}
+
+.kx-header .kx-nav li .kx-header-slide li{
+  padding-left: 0;
+  list-style: none;
+  line-height: 35px;
+
+}
+.kx-header .kx-nav li .kx-header-slide li a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  padding-left: 25px;
+  display: block;
+
+}
+
+/*public-header end*/
+
+
+
+/*public-footer begin*/
+
+
+ .footer-wrap{
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  background: #333;
+  color: #fff;
+ 
+  overflow: hidden;
+}
+
+ .footer-wrap a{
+  color: #fff;
+  margin-left: 5px;
+}
+
+
+/*public-footer end*/
+
+
+/*模板页面规则对应样式，实际开发中中请删除*/
+
+.kx-rule{
+  width: 100%;
+  margin-top: 80px;
+}
+
+.kx-rule h1{
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+  font-family: 'Chelsea Market', Georgia, serif
+  
+}
+
+.kx-rule h2{
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+  font-family: 'Chelsea Market', Georgia, serif;
+  margin-top: 15px;
+}
+.kx-rule h3{
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+  font-family: 'Chelsea Market', Georgia, serif;
+  margin-top: 15px;
+}
+.kx-rule ul{
+  width: 850px;
+  margin: 60px auto;
+}
+
+.kx-rule ul li{
+  line-height: 50px;
+  font-size: 24px;
+}
+
+.kx-rule ul li a{
+  color: #ff0000;
+  /*text-decoration: underline;*/
+}
+/*模板页面规则对应样式，实际开发中中请删除*/
+
+
+
+
+

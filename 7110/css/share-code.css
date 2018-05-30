@@ -1,0 +1,79 @@
+body {
+  background-color: #795548;
+}
+.share-code-box .shade-wrap {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.share-code-box .shade-wrap .guide {
+  position: absolute;
+  right: 1.14666667rem;
+  top: 0.29333333rem;
+  width: 1.94666667rem;
+  height: 1.94666667rem;
+}
+.share-code-box .info-box {
+  height: 9.70666667rem;
+  margin: 1.28rem 0.96rem 0 0.96rem;
+  background: url("../images/share-code/info-bg.png") no-repeat;
+  background-size: 100% 100%;
+  border-radius: 0.66666667rem;
+  padding-top: 0.53333333rem;
+}
+.share-code-box .info-box .user-info {
+  display: flex;
+  height: 1.54666667rem;
+}
+.share-code-box .info-box .user-info .left {
+  padding-left: 0.53333333rem;
+  padding-right: 0.32rem;
+}
+.share-code-box .info-box .user-info .left .head-img {
+  width: 1.54666667rem;
+  height: 1.54666667rem;
+  border-radius: 1.54666667rem;
+}
+.share-code-box .info-box .user-info .right .desc1 {
+  height: 0.48rem;
+  color: #212121;
+  font-size: 0.48rem;
+  margin-top: 0.18666667rem;
+  margin-bottom: 0.21333333rem;
+}
+.share-code-box .info-box .user-info .right .desc2 {
+  height: 0.48rem;
+  color: #757575;
+  font-size: 0.37333333rem;
+}
+.share-code-box .info-box .code-info {
+  text-align: center;
+  margin-top: 1.65333333rem;
+}
+.share-code-box .info-box .code-info .code {
+  width: 5.33333333rem;
+  height: 5.33333333rem;
+}
+.share-code-box .bottom-box {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.share-code-box .bottom-box .btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 0.48rem;
+  height: 1.30666667rem;
+  line-height: 1.30666667rem;
+  background-color: #5D4037;
+}
