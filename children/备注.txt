@@ -1,0 +1,8 @@
+1.首页：
+第一个弹窗url:index.html?type=1
+第二个弹窗url:index.html?type=2
+第三个弹窗url:index.html?type=3
+
+2.我的红包：
+discount.html
+
