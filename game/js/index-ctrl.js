@@ -1,10 +1,12 @@
 $(function () {
     var initSecond = 3;//从第几秒倒计时
     var currentSecond;//当前秒数
-    var stock = 3;//n*n矩阵(默认3*3)
+    var stock = 3;//默认3*3矩阵
+    var minStock = 2;//最大矩阵2*2
     var maxStock = 9;//最大矩阵9*9
-    if (Number(getParamByUrl('n')) && Number(getParamByUrl('n')) <= maxStock && (getParamByUrl('n') !== 'false')) {
-        stock = Number(getParamByUrl('n'));
+    var paramN = Number(getParamByUrl('n'));
+    if (paramN && paramN >= minStock && paramN <= maxStock) {
+        stock = paramN;
     }
     $('#currentTitle').html(stock + 'X' + stock);//title
     var beginTime;
