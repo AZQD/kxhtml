@@ -108,7 +108,7 @@ $(function () {
                         }
                         $itemLi.removeClass('focused').eq(focusedItemIndex).addClass('focused');
                     }
-                    if (e.keyCode === 13) {//回车
+                    if (e.keyCode === 13 || e.keyCode === 23) {//回车&OK
                         checkItem($itemLi.eq(focusedItemIndex));
                     }
                 });
