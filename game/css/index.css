@@ -67,8 +67,8 @@
   height: 2.77777778rem;
   float: left;
   width: 33.333333%;
-  padding: 0 0.12962963rem;
-  margin-bottom: 0.48148148rem;
+  padding: 0.12962963rem;
+  margin-bottom: 0.07407407rem;
 }
 .index-wrapper .part2-box .part2-warp .game-box .item-ul .item-li .item-li-num {
   width: 100%;
@@ -83,6 +83,9 @@
 .index-wrapper .part2-box .part2-warp .game-box .item-ul .checked .item-li-num {
   background-color: #155A2B;
   box-shadow: 0 0.11111111rem #0A4217;
+}
+.index-wrapper .part2-box .part2-warp .game-box .item-ul .focused .item-li-num {
+  border: 1px solid red;
 }
 .index-wrapper .part2-box .part2-warp .ctrl-box {
   height: 2rem;
