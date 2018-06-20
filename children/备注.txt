@@ -6,3 +6,8 @@
 2.我的红包：
 discount.html
 
+
+SVN地址：svn://114.215.157.156/amsx_dev/UED
+
+账号：dev6
+密码：d9g8s7n3
