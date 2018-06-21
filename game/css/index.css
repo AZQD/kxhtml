@@ -1,6 +1,13 @@
 * {
   font-family: "微软雅黑" !important;
 }
+body {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+body::-webkit-scrollbar {
+  width: 0;
+}
 .index-wrapper .part1-box {
   height: 100vh;
   background-color: #4A4879;
@@ -26,11 +33,10 @@
   background-color: #28964D;
 }
 .index-wrapper .part2-box {
-  height: 100vh;
   background-color: #28964D;
 }
 .index-wrapper .part2-box .part2-warp {
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
