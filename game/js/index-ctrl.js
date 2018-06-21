@@ -9,6 +9,7 @@ $(function () {
         stock = paramN;
     }
     $('#currentTitle').html(stock + 'X' + stock);//title
+    $('#maxNumber').html(stock * stock);
     var beginTime;
     var endTime;
     //开始
@@ -64,66 +65,71 @@ $(function () {
                 });
                 beginTime = new Date();
                 var clickOne = true;//第一次正确点击
+                var focusedOne = true;//第一次获取光标
                 var currentNum = 1;//点击的数字
-                var currentItem;//当前选中的元素
                 var focusedItemIndex = 0;//光标停留的位置
-                $itemLi.eq(focusedItemIndex).addClass('focused');
                 $itemLi.unbind('click').bind('click', function () {
+                    focusedOne = false;//点击后获取到光标
                     focusedItemIndex = $(this).index();
                     $itemLi.removeClass('focused').eq(focusedItemIndex).addClass('focused');
-                    currentItem = $(this);
-                    checkItem(currentItem);
+                    checkItem($(this));
                 });
                 $(document).keydown(function (e) {
-                    var e = e || event;
-                    if (e.keyCode === 37) {//左
-                        if (focusedItemIndex === 0) {
-                            focusedItemIndex = stock * stock - 1;
-                        } else {
-                            focusedItemIndex--;
-                        }
+                    if (focusedOne) {//点击任意键获取光标
+                        focusedOne = false;
+                        focusedItemIndex = 0;
                         $itemLi.removeClass('focused').eq(focusedItemIndex).addClass('focused');
-                    }
-                    if (e.keyCode === 39) {//右
-                        if (focusedItemIndex === stock * stock - 1) {
-                            focusedItemIndex = 0;
-                        } else {
-                            focusedItemIndex++;
+                    } else {
+                        var e = e || event;
+                        if (e.keyCode === 37) {//左
+                            if (focusedItemIndex === 0) {
+                                focusedItemIndex = stock * stock - 1;
+                            } else {
+                                focusedItemIndex--;
+                            }
+                            $itemLi.removeClass('focused').eq(focusedItemIndex).addClass('focused');
                         }
-                        $itemLi.removeClass('focused').eq(focusedItemIndex).addClass('focused');
-                    }
-                    if (e.keyCode === 38) {//上
-                        if (focusedItemIndex - stock < 0) {
-                            focusedItemIndex = (focusedItemIndex + stock * (stock - 1));
-                        } else {
-                            focusedItemIndex -= stock;
+                        if (e.keyCode === 39) {//右
+                            if (focusedItemIndex === stock * stock - 1) {
+                                focusedItemIndex = 0;
+                            } else {
+                                focusedItemIndex++;
+                            }
+                            $itemLi.removeClass('focused').eq(focusedItemIndex).addClass('focused');
                         }
-                        $itemLi.removeClass('focused').eq(focusedItemIndex).addClass('focused');
-                    }
-                    if (e.keyCode === 40) {//下
-                        if (focusedItemIndex + stock >= stock * stock) {
-                            focusedItemIndex = (focusedItemIndex + stock - stock * stock);
-                        } else {
-                            focusedItemIndex += stock;
+                        if (e.keyCode === 38) {//上
+                            if (focusedItemIndex - stock < 0) {
+                                focusedItemIndex = (focusedItemIndex + stock * (stock - 1));
+                            } else {
+                                focusedItemIndex -= stock;
+                            }
+                            $itemLi.removeClass('focused').eq(focusedItemIndex).addClass('focused');
                         }
-                        $itemLi.removeClass('focused').eq(focusedItemIndex).addClass('focused');
-                    }
-                    if (e.keyCode === 13 || e.keyCode === 23) {//回车&OK
-                        checkItem($itemLi.eq(focusedItemIndex));
+                        if (e.keyCode === 40) {//下
+                            if (focusedItemIndex + stock >= stock * stock) {
+                                focusedItemIndex = (focusedItemIndex + stock - stock * stock);
+                            } else {
+                                focusedItemIndex += stock;
+                            }
+                            $itemLi.removeClass('focused').eq(focusedItemIndex).addClass('focused');
+                        }
+                        if (e.keyCode === 13 || e.keyCode === 23) {//回车&OK
+                            checkItem($itemLi.eq(focusedItemIndex));
+                        }
                     }
                 });
 
-                function checkItem(currentItem) {
+                function checkItem(thisItem) {
                     if (clickOne) {//点击1
-                        if (parseInt(currentItem.attr('num')) === 1) {
+                        if (parseInt(thisItem.attr('num')) === 1) {
                             clickOne = false;
                             currentNum++;
-                            currentItem.addClass('checked');
+                            thisItem.addClass('checked');
                         }
                     } else {
-                        if (parseInt(currentItem.attr('num')) === currentNum) {
+                        if (parseInt(thisItem.attr('num')) === currentNum) {
                             currentNum++;
-                            currentItem.addClass('checked');
+                            thisItem.addClass('checked');
                             if (currentNum > stock * stock) { //选择数字完成
                                 endTime = new Date();
                                 $('.index-wrapper .part3-box .time .time-num').html((endTime - beginTime) / 1000);

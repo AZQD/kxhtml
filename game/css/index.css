@@ -85,7 +85,7 @@
   box-shadow: 0 0.11111111rem #0A4217;
 }
 .index-wrapper .part2-box .part2-warp .game-box .item-ul .focused .item-li-num {
-  border: 1px solid red;
+  border: 1px solid #fff;
 }
 .index-wrapper .part2-box .part2-warp .ctrl-box {
   height: 2rem;
