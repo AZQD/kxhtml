@@ -33,7 +33,7 @@ body::-webkit-scrollbar {
   background-color: #28964D;
 }
 .index-wrapper .part2-box {
-  background-color: #28964D;
+  background-color: #1C1C1C;
 }
 .index-wrapper .part2-box .part2-warp {
   min-height: 100vh;
@@ -43,9 +43,10 @@ body::-webkit-scrollbar {
 .index-wrapper .part2-box .part2-warp .tips-box {
   text-align: center;
   color: #fff;
-  height: 1.85185185rem;
-  line-height: 1.85185185rem;
+  height: 1.38888889rem;
+  line-height: 1.38888889rem;
   font-size: 0.5rem;
+  background-color: #28964D;
 }
 .index-wrapper .part2-box .part2-warp .part2-middle {
   display: flex;
@@ -94,10 +95,11 @@ body::-webkit-scrollbar {
   border: 1px solid #fff;
 }
 .index-wrapper .part2-box .part2-warp .ctrl-box {
-  height: 2rem;
+  height: 1.38888889rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #28964D;
 }
 .index-wrapper .part2-box .part2-warp .ctrl-box .ctrl_icon {
   width: 1.62037037rem;
