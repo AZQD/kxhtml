@@ -105,20 +105,25 @@ $(function () {
                 var finalNeedLenTh;
                 var itemUlWidth = parseInt($('#game-box').width());//game-box的宽度
                 var itemClientHeight = $(window).height() - $('#tips-box').height() - $('#ctrl-box').height();
-                if(itemUlWidth>=itemClientHeight){
-                    finalNeedLenTh = itemClientHeight-100;
-                }else {
+                var currentNumFontSize = 1;
+                if(itemUlWidth>=itemClientHeight){//横屏
+                    finalNeedLenTh = itemClientHeight - 50;
+                    if (stock > 4) {
+                        currentNumFontSize = 0.1
+                    }
+                }else {//竖屏
                     finalNeedLenTh = itemUlWidth;
+                    if (stock > 5) {
+                        currentNumFontSize = 0.5
+                    }
                 }
                 $('#game-box').width(finalNeedLenTh).css('margin', '0 auto');
 
                 // $('#game-box').width(itemUlWidth/2)
                 // itemUlWidth = itemUlWidth/2;
                 var $itemLi = $('.index-wrapper .part2-box .part2-warp .game-box .item-ul .item-li');
-                var currentNumFontSize = 1;
-                if (stock > 5) {
-                    currentNumFontSize = 0.5
-                }
+
+                console.log(123,currentNumFontSize);
                 $itemLi.css({
                     'width': finalNeedLenTh / stock + 'px',
                     'height': finalNeedLenTh / stock + 'px',

@@ -43,8 +43,8 @@ body::-webkit-scrollbar {
 .index-wrapper .part2-box .part2-warp .tips-box {
   text-align: center;
   color: #fff;
-  height: 1.38888889rem;
-  line-height: 1.38888889rem;
+  height: 0.92592593rem;
+  line-height: 0.92592593rem;
   font-size: 0.5rem;
   background-color: #28964D;
 }
@@ -95,7 +95,7 @@ body::-webkit-scrollbar {
   border: 1px solid #fff;
 }
 .index-wrapper .part2-box .part2-warp .ctrl-box {
-  height: 1.38888889rem;
+  height: 0.92592593rem;
   display: flex;
   align-items: center;
   justify-content: center;
