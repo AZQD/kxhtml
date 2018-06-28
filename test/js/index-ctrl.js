@@ -54,7 +54,6 @@ $(function(){
     $('.index-wrapper .content-box .topic').html(jsonData.topic);
     //头图
     $('.index-wrapper .content-box .img-box .img').attr('src', jsonData.img);
-
     questionFun(0);
     /**
      * 当前是第几道题
@@ -78,4 +77,5 @@ $(function(){
             );
         }
     }
+    $('.index-wrapper').show();
 });
