@@ -30,6 +30,11 @@ switch (type) {
     case '6':
         contentBoxBg = `images/index/bg${type}.png`;
         innerImgBg = `images/index/img-bg${type}.png`;
+        innerBoxBgColor = '#f5e3be';
+        break;
+    case '7':
+        contentBoxBg = `images/index/bg${type}.png`;
+        innerImgBg = `images/index/img-bg${type}.png`;
         innerBoxBgColor = '#e1eee0';
         break;
     default:
@@ -57,12 +62,12 @@ $(function () {
         'src': jsonData.innerImg
     });
     //二维码图片
-    $('.index-wrapper .content-box .inner-box .desc-box .right .code').attr({
+    $('.index-wrapper .content-box .inner-box .code-box .code').attr({
         'src': jsonData.code
     });
     //info-title
-    $('.index-wrapper .content-box .inner-box .desc-box .left .title').html(jsonData.infoTitle);
+    $('.index-wrapper .content-box .inner-box .desc-box .inner .title').html(jsonData.infoTitle);
     //info-content
-    $('.index-wrapper .content-box .inner-box .desc-box .left .content').html(jsonData.infoContent);
+    $('.index-wrapper .content-box .inner-box .desc-box .inner .content').html(jsonData.infoContent);
     $('.index-wrapper').show();
 });

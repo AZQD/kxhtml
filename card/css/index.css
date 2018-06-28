@@ -18,7 +18,7 @@
   position: absolute;
 }
 .index-wrapper .content-box .inner-box .img-box .img {
-  width: 100%;
+  width: 1517px;
   border-radius: 92px;
 }
 .index-wrapper .content-box .inner-box .img-bg-box {
@@ -31,28 +31,44 @@
   width: 100%;
 }
 .index-wrapper .content-box .inner-box .desc-box {
+  min-height: 422px;
   position: absolute;
   width: 100%;
-  bottom: 56px;
-  padding: 0 150px;
-  display: flex;
-}
-.index-wrapper .content-box .inner-box .desc-box .left {
-  flex-grow: 1;
+  bottom: 0;
+  padding-left: 150px;
+  padding-right: 600px;
   color: #fff;
-  padding-right: 132px;
+  display: flex;
+  align-items: center;
 }
-.index-wrapper .content-box .inner-box .desc-box .left .title {
+.index-wrapper .content-box .inner-box .desc-box .inner {
+  padding-bottom: 35px;
+}
+.index-wrapper .content-box .inner-box .desc-box .inner .title {
   font-size: 64px;
   text-align: center;
   height: 136px;
   line-height: 136px;
+  position: relative;
+  left: -45px;
 }
-.index-wrapper .content-box .inner-box .desc-box .left .content {
+.index-wrapper .content-box .inner-box .desc-box .inner .content {
   font-size: 48px;
   line-height: 68px;
 }
-.index-wrapper .content-box .inner-box .desc-box .right .code {
+.index-wrapper .content-box .inner-box .code-box {
+  position: absolute;
+  right: 150px;
+  bottom: 60px;
   width: 305px;
   height: 305px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.index-wrapper .content-box .inner-box .code-box .code {
+  width: 264px;
+  height: 264px;
 }
