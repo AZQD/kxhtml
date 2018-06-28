@@ -1,0 +1,53 @@
+.index-wrapper .content-box {
+  min-height: 100vh;
+  background: url("../images/index/bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+.index-wrapper .content-box .topic {
+  text-align: center;
+  color: #fff7de;
+  font-size: 0.61333333rem;
+  width: 10rem;
+  padding: 0.37333333rem 0;
+}
+.index-wrapper .content-box .img-box {
+  margin-bottom: -1.62666667rem;
+}
+.index-wrapper .content-box .img-box .img {
+  width: 100%;
+}
+.index-wrapper .content-box .question-box {
+  text-align: center;
+}
+.index-wrapper .content-box .question-box .title {
+  color: #fff;
+  font-size: 0.48rem;
+}
+.index-wrapper .content-box .question-box .num-ctrl {
+  line-height: 0.48rem;
+  color: #fff;
+  font-size: 0.4rem;
+  background: url("../images/index/line.png") no-repeat center center;
+  background-size: 100% 0.05333333rem;
+}
+.index-wrapper .content-box .question-box .desc {
+  font-size: 0.32rem;
+  color: #7ac0db;
+  padding: 0 1.01333333rem;
+  line-height: 0.45333333rem;
+  text-align: justify;
+  margin-top: 0.26666667rem;
+}
+.index-wrapper .content-box .question-box .answers {
+  padding: 0 0.88rem;
+  color: #3f3b3c;
+  font-size: 0.46666667rem;
+}
+.index-wrapper .content-box .question-box .answers .item {
+  margin-top: 0.21333333rem;
+  width: 100%;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  background: url("../images/index/answer-bg.png") no-repeat center center;
+  background-size: 100% 100%;
+}
