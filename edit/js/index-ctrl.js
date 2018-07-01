@@ -27,15 +27,32 @@ $(function () {
         }
     });
 
+    //bottom-ctrl
+    $('.index-wrapper .content-box .huiBen-box .middle .btn-box2 button').unbind('click').bind('click', function(){
+        let index = $(this).index();
+        if (index === 0) {
+            $('.index-wrapper .content-box .huiBen-box .middle .bottom-ctrl').show();
+            $('.index-wrapper .content-box .huiBen-box .middle .bottom-other-ctrl').hide();
+        } else {
+            $('.index-wrapper .content-box .huiBen-box .middle .bottom-ctrl').hide();
+            $('.index-wrapper .content-box .huiBen-box .middle .bottom-other-ctrl').show();
+        }
+    });
+
+    //中间-底部-最小自动播放时长
+    $('#minAutoSelect').unbind('change').bind('change', function(){
+        document.getElementById('minAutoInput').value = document.getElementById('minAutoSelect').options[document.getElementById('minAutoSelect').selectedIndex].value;
+    });
+
     //切换右侧菜单
     $('.index-wrapper .menu-box .menu-item').unbind('click').bind('click', function () {
         let index = $(this).index();
         $('.index-wrapper .menu-box .menu-item').removeClass('active').eq(index).addClass('active');
         if (index === 0) {
-            $('.index-wrapper .content-box .huiBen-box').show();
+            $('.index-wrapper .content-box .huiBen-box .right .right-content').show();
             $('.index-wrapper .content-box .other-box').hide();
         } else {
-            $('.index-wrapper .content-box .huiBen-box').hide();
+            $('.index-wrapper .content-box .huiBen-box .right .right-content').hide();
             $('.index-wrapper .content-box .other-box').show().html($(this).html());
         }
     });

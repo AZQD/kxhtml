@@ -3,9 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 1210px;
+  width: 1210px;
   .content-box{
-    width: 1133px;
+    //width: 1133px;
     border: 1px solid #000;
     height: 625px;
     .huiBen-box{
@@ -21,6 +21,10 @@
       }
       input{
         text-indent: 4px;
+        outline: none;
+        border: 1px solid #000;
+      }
+      select{
         outline: none;
         border: 1px solid #000;
       }
@@ -127,8 +131,11 @@
             .playSty-box{
               padding-top: 6px;
               text-align: right;
-              button{
+              /*button{
                 width: 53.8px;
+              }*/
+              select{
+                width: 170px;
               }
             }
             .playTime-box{
@@ -141,7 +148,19 @@
                 padding: 0 4px;
                 text-align: right;
               }
-              .btns{
+              .minAuto-box{
+                display: inline-block;
+                position: relative;
+                .minAutoPlayTime-select{
+                  width: 170px;
+                }
+                .select-ipt{
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                }
+              }
+              /*.btns{
                 width: 170px;
                 .btn1{
                   width: 53.8px;
@@ -149,7 +168,7 @@
                 .btn2{
                   width: 112px;
                 }
-              }
+              }*/
             }
           }
           .right-ctrl{
@@ -197,88 +216,93 @@
       .right{
         width: 346px;
         padding-top: 26px;
-        .part-box{
-          display: flex;
-          padding: 0 8px;
-          .part-left{
-            width: 0;
-            flex-grow: 1;
-            padding-left: 8px;
-            padding-right: 10px;
-          }
-          .part-right{
-            width: 216px;
-            text-align: center;
-          }
-          .ipt-right{
+        .right-content{
+          .part-box{
             display: flex;
-            align-items: center;
-            .ipt{
-              width: 100%;
+            padding: 0 8px;
+            .part-left{
+              width: 0;
+              flex-grow: 1;
+              padding-left: 8px;
+              padding-right: 10px;
+            }
+            .part-right{
+              width: 216px;
               text-align: center;
             }
+            .ipt-right{
+              display: flex;
+              align-items: center;
+              .ipt{
+                width: 100%;
+                text-align: center;
+              }
+            }
           }
-        }
-        .music-box{
+          .music-box{
 
-        }
-        .sound-box{
-          padding-top: 8px;
-        }
-        .recommend-box{
-          padding-top: 8px;
-        }
-        .two-btn-box{
-          .part-right2{
-            width: 106px;
-            margin-right: 5px;
           }
-          .part-right2:last-child{
-            margin-right: 0;
+          .sound-box{
+            padding-top: 8px;
           }
-        }
-        .upload-box{
-          margin-top: 16px;
-          border-top: 1px solid #000;
-          display: flex;
-          padding: 0 8px;
-          padding-top: 10px;
-          .part-left{
-            width: 0;
-            flex-grow: 1;
-            padding-left: 8px;
+          .recommend-box{
+            padding-top: 8px;
           }
-          .part-right{
-            width: 216px;
-            button{
+          .two-btn-box{
+            /*.part-right2{
               width: 106px;
+              margin-right: 5px;
+            }
+            .part-right2:last-child{
+              margin-right: 0;
+            }*/
+            select{
+              width: 216px;
             }
           }
-        }
-        .img-list-box{
-          padding-top: 18px;
-          .item{
-            padding-left: 12px;
-            font-size: 0;
+          .upload-box{
+            margin-top: 16px;
+            border-top: 1px solid #000;
             display: flex;
-            align-items: center;
-            margin-top: 8px;
-            span{
-              font-size: 14px;
-              display: inline-block;
+            padding: 0 8px;
+            padding-top: 10px;
+            .part-left{
+              width: 0;
+              flex-grow: 1;
+              padding-left: 8px;
             }
-            .info1{
-              width: 36px;
-              height: 20px;
-              border: 1px solid #000;
-              background-color: #a9d18e;
+            .part-right{
+              width: 216px;
+              button{
+                width: 106px;
+              }
             }
-            .info2{
-              width: 124px;
+          }
+          .img-list-box{
+            padding-top: 18px;
+            .item{
               padding-left: 12px;
-            }
-            .info3{
-              width: 104px;
+              font-size: 0;
+              display: flex;
+              align-items: center;
+              margin-top: 8px;
+              span{
+                font-size: 14px;
+                display: inline-block;
+              }
+              .info1{
+                width: 36px;
+                height: 20px;
+                border: 1px solid #000;
+                background-color: #a9d18e;
+              }
+              .info2{
+                width: 124px;
+                padding-left: 12px;
+              }
+              .info3{
+                width: 104px;
+              }
             }
           }
         }

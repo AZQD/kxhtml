@@ -54,15 +54,28 @@
               </div>
               <div class="playSty-box">
                 <span class="text">本页播放模式</span>
-                <button type="button" class="btn btn-default">全局</button>
-                <button type="button" class="btn btn-default">自动</button>
-                <button type="button" class="btn btn-default">手动</button>
+                <select name="" id="pagePlayStyle">
+                  <option value="全局">全局</option>
+                  <option value="自动">自动</option>
+                  <option value="手动">手动</option>
+                </select>
+                <!--<button type="button" class="btn btn-default">全局</button>-->
+                <!--<button type="button" class="btn btn-default">自动</button>-->
+                <!--<button type="button" class="btn btn-default">手动</button>-->
               </div>
               <div class="playTime-box">
                 <div class="text">最小自动播放时长</div>
-                <div class="btns">
+                <!--<div class="btns">
                   <button type="button" class="btn btn1 btn-default">全局</button>
                   <button type="button" class="btn btn2 btn-default">10S</button>
+                </div>-->
+                <div class="minAuto-box">
+                  <select class="minAutoPlayTime-select" name="" id="minAutoSelect">
+                    <option value="全局">全局</option>
+                    <option value="10S">10S</option>
+                    <option value="" class="cls_option_defined">---自定义---</option>
+                  </select>
+                  <input class="select-ipt" type="text" value="全局" id="minAutoInput"/>
                 </div>
               </div>
 
@@ -83,71 +96,83 @@
               <button type="button" class="btn btn-default btn-delete">删除本页</button>
             </div>
           </div>
+          <div class="bottom-other-ctrl" style="display: none;">内容设置</div>
         </div>
         <div class="right">
-          <div class="part-box music-box">
-            <div class="part-left">背景音乐URL</div>
-            <input type="text" class="part-right" />
-          </div>
-          <div class="part-box sound-box">
-            <div class="part-left">背景音乐音量</div>
-            <button type="button" class="btn btn-default part-right">滑块</button>
-          </div>
-          <div class="part-box recommend-box">
-            <div class="part-left">推荐绘本Code</div>
-            <input type="text" class="part-right" value="1234567890" />
-          </div>
-          <div class="part-box recommend-name-box">
-            <div class="part-left">推荐绘本名称（标签）</div>
-            <div class="part-right ipt-right">
-              <input type="text" class="ipt" value="大型动物" />
+          <div class="right-content">
+            <div class="part-box music-box">
+              <div class="part-left">背景音乐URL</div>
+              <input type="text" class="part-right" />
+            </div>
+            <div class="part-box sound-box">
+              <div class="part-left">背景音乐音量</div>
+              <input type="number" class="part-right">
+              <!--<button type="button" class="btn btn-default part-right">滑块</button>-->
+            </div>
+            <div class="part-box recommend-box">
+              <div class="part-left">推荐绘本Code</div>
+              <input type="text" class="part-right" value="1234567890" />
+            </div>
+            <div class="part-box recommend-name-box">
+              <div class="part-left">推荐绘本名称（标签）</div>
+              <div class="part-right ipt-right">
+                <input type="text" class="ipt" value="大型动物" />
+              </div>
+            </div>
+            <div class="part-box two-btn-box">
+              <div class="part-left">背景音乐音量</div>
+              <select name="" id="musicSound">
+                <option value="自动">自动</option>
+                <option value="手动">手动</option>
+              </select>
+              <!--<button type="button" class="btn btn-default part-right2">自动</button>-->
+              <!--<button type="button" class="btn btn-default part-right2">手动</button>-->
+            </div>
+            <div class="part-box auto-box">
+              <div class="part-left">最小自动播放时长</div>
+              <div class="part-right ipt-right">
+                <input type="text" class="ipt" value="5S" />
+              </div>
+            </div>
+            <div class="part-box two-btn-box">
+              <div class="part-left">默认切换效果</div>
+              <select name="" id="toggleStyle">
+                <option value="左滑">左滑</option>
+                <option value="淡入">淡入</option>
+              </select>
+              <!--<button type="button" class="btn btn-default part-right2">左滑</button>-->
+              <!--<button type="button" class="btn btn-default part-right2">淡入</button>-->
+            </div>
+            <div class="upload-box">
+              <div class="part-left">包内文件：</div>
+              <div class="part-right">
+                <button type="button" class="btn btn-default">上传</button>
+              </div>
+            </div>
+            <div class="img-list-box">
+              <div class="item">
+                <span class="info1"></span>
+                <span class="info2">01.jpg</span>
+                <span class="info3"></span>
+                <span class="info4">124K</span>
+              </div>
+              <div class="item">
+                <span class="info1"></span>
+                <span class="info2">02.jpg</span>
+                <span class="info3"></span>
+                <span class="info4">124K</span>
+              </div>
+              <div class="item">
+                <span class="info1"></span>
+                <span class="info2">01.mp3</span>
+                <span class="info3">0:10</span>
+                <span class="info4">124K</span>
+              </div>
             </div>
           </div>
-          <div class="part-box two-btn-box">
-            <div class="part-left">背景音乐音量</div>
-            <button type="button" class="btn btn-default part-right2">自动</button>
-            <button type="button" class="btn btn-default part-right2">手动</button>
-          </div>
-          <div class="part-box auto-box">
-            <div class="part-left">最小自动播放时长</div>
-            <div class="part-right ipt-right">
-              <input type="text" class="ipt" value="5S" />
-            </div>
-          </div>
-          <div class="part-box two-btn-box">
-            <div class="part-left">默认切换效果</div>
-            <button type="button" class="btn btn-default part-right2">左滑</button>
-            <button type="button" class="btn btn-default part-right2">淡入</button>
-          </div>
-          <div class="upload-box">
-            <div class="part-left">包内文件：</div>
-            <div class="part-right">
-              <button type="button" class="btn btn-default">上传</button>
-            </div>
-          </div>
-          <div class="img-list-box">
-            <div class="item">
-              <span class="info1"></span>
-              <span class="info2">01.jpg</span>
-              <span class="info3"></span>
-              <span class="info4">124K</span>
-            </div>
-            <div class="item">
-              <span class="info1"></span>
-              <span class="info2">02.jpg</span>
-              <span class="info3"></span>
-              <span class="info4">124K</span>
-            </div>
-            <div class="item">
-              <span class="info1"></span>
-              <span class="info2">01.mp3</span>
-              <span class="info3">0:10</span>
-              <span class="info4">124K</span>
-            </div>
-          </div>
+          <div class="other-box" style="display: none;"></div>
         </div>
       </div>
-      <div class="other-box" style="display: none;"></div>
     </div>
     <div class="menu-box">
       <div class="menu-item active">绘本设置</div>
