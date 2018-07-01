@@ -172,8 +172,10 @@
 }
 .index-wrapper .content-box .huiBen-box .middle .bottom-ctrl .left-ctrl .playTime-box .minAuto-box .select-ipt {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 1px;
+  top: 1px;
+  line-height: 14px;
+  border: none;
 }
 .index-wrapper .content-box .huiBen-box .middle .bottom-ctrl .right-ctrl {
   width: 100%;
