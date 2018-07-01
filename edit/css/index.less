@@ -3,11 +3,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1210px;
+  min-width: 1210px;
+  width: 100%;
   .content-box{
     //width: 1133px;
     border: 1px solid #000;
     height: 625px;
+    flex-grow: 1;
     .huiBen-box{
       height: 100%;
       display: flex;
@@ -29,7 +31,8 @@
         border: 1px solid #000;
       }
       .left{
-        width: 205px;
+        flex-grow: 1;
+        min-width: 205px;
         overflow-y: scroll;
         padding: 38px 0;
         -ms-overflow-style: none;
@@ -59,8 +62,9 @@
         width: 0;
       }
       .middle{
+        flex-grow: 1;
         color: #333;
-        width: 580px;
+        min-width: 580px;
         border-left: 1px solid #000;
         border-right: 1px solid #000;
         .iframe-box{
@@ -141,18 +145,22 @@
             .playTime-box{
               display: flex;
               align-items: center;
+              justify-content: flex-end;
+              text-align: right;
               .text{
-                width: 0;
+                width: 107px;
                 line-height: 18px;
-                flex-grow: 1;
                 padding: 0 4px;
                 text-align: right;
               }
               .minAuto-box{
+                //flex-grow: 1;
                 display: inline-block;
                 position: relative;
+                width: 170px;
                 .minAutoPlayTime-select{
-                  width: 170px;
+                  //width: 170px;
+                  width: 100%;
                 }
                 .select-ipt{
                   position: absolute;
@@ -179,6 +187,7 @@
             padding-right: 8px;
             position: relative;
             .html-box{
+              text-align: right;
               .text{
 
               }
@@ -216,20 +225,22 @@
         }
       }
       .right{
-        width: 346px;
+        flex-grow: 1;
+        min-width: 346px;
         padding-top: 26px;
         .right-content{
           .part-box{
             display: flex;
             padding: 0 8px;
             .part-left{
-              width: 0;
-              flex-grow: 1;
+              width: 127px;
+              //flex-grow: 1;
               padding-left: 8px;
               padding-right: 10px;
             }
             .part-right{
-              width: 216px;
+              min-width: 216px;
+              flex-grow: 1;
               text-align: center;
             }
             .ipt-right{
@@ -259,7 +270,8 @@
               margin-right: 0;
             }*/
             select{
-              width: 216px;
+              //width: 216px;
+              flex-grow: 1;
             }
           }
           .upload-box{
