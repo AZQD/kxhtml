@@ -62,7 +62,7 @@
 .index-wrapper .content-box .huiBen-box .middle {
   flex-grow: 1;
   color: #333;
-  min-width: 580px;
+  width: 580px;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
 }
@@ -174,7 +174,6 @@
   position: absolute;
   left: 1px;
   top: 1px;
-  line-height: 14px;
   border: none;
 }
 .index-wrapper .content-box .huiBen-box .middle .bottom-ctrl .right-ctrl {
