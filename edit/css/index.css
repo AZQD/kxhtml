@@ -8,7 +8,8 @@
 }
 .index-wrapper .content-box {
   border: 1px solid #000;
-  height: 625px;
+  height: 100%;
+  min-height: 625px;
   flex-grow: 1;
 }
 .index-wrapper .content-box .huiBen-box {
@@ -35,10 +36,8 @@
 .index-wrapper .content-box .huiBen-box .left {
   flex-grow: 1;
   min-width: 205px;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding: 38px 0;
-  -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
 }
 .index-wrapper .content-box .huiBen-box .left .page-item {
   margin: 0 auto;
@@ -59,9 +58,6 @@
   width: 184px;
   height: 96px;
   border: 1px solid #000;
-}
-.index-wrapper .content-box .huiBen-box .left::-webkit-scrollbar {
-  width: 0;
 }
 .index-wrapper .content-box .huiBen-box .middle {
   flex-grow: 1;
@@ -101,9 +97,7 @@
   display: flex;
 }
 .index-wrapper .content-box .huiBen-box .middle .bottom-ctrl .left-ctrl {
-  width: 100%;
   flex-grow: 1;
-  padding: 0 10px;
 }
 .index-wrapper .content-box .huiBen-box .middle .bottom-ctrl .left-ctrl .bgImg-box {
   vertical-align: top;
@@ -184,7 +178,6 @@
   border: none;
 }
 .index-wrapper .content-box .huiBen-box .middle .bottom-ctrl .right-ctrl {
-  width: 100%;
   flex-grow: 1;
   padding-right: 8px;
   position: relative;
@@ -220,6 +213,10 @@
   right: 8px;
   bottom: 8px;
   padding: 0 14px;
+}
+.index-wrapper .content-box .huiBen-box .middle .bottom-other-ctrl {
+  padding: 0 18px;
+  display: flex;
 }
 .index-wrapper .content-box .huiBen-box .right {
   flex-grow: 1;
@@ -311,19 +308,20 @@
 .index-wrapper .content-box .huiBen-box .right .right-content .img-list-box .item .info3 {
   width: 104px;
 }
+.index-wrapper .content-box .huiBen-box .right .other-box {
+  width: 100%;
+}
 .index-wrapper .menu-box {
   width: 38px;
-  height: 625px;
+  height: 100%;
   line-height: 38px;
   border: 1px solid #000;
   border-left: none;
 }
 .index-wrapper .menu-box .menu-item {
   cursor: pointer;
-  text-align: center;
   width: 100%;
   font-size: 18px;
-  margin: 0 auto;
   writing-mode: vertical-lr;
   /*从左向右 从右向左是 writing-mode: vertical-rl;*/
   writing-mode: tb-lr;
