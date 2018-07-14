@@ -17,7 +17,7 @@ $(function () {
     animateLeft(eachStageLen * (totalStage - 1), initAnimateTime, initPoint);
 
     function initPoint() {
-        let len = eachRowLen * age;
+        let len = eachStageLen * age;
         let maxWidth = $topBox.children('.topImg').width() - WindowLWidth;
         if (len >= maxWidth) {
             len = maxWidth;
