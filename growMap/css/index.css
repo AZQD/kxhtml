@@ -1,0 +1,23 @@
+body {
+  overflow: hidden;
+}
+.index-wrapper .content-box {
+  font-size: 0;
+}
+.index-wrapper .content-box .partA .topBox {
+  position: relative;
+  z-index: 300;
+}
+.index-wrapper .content-box .partB {
+  display: flex;
+}
+.index-wrapper .content-box .partB .leftBox {
+  position: relative;
+  z-index: 200;
+}
+.index-wrapper .content-box .partB .rightBox {
+  position: relative;
+  z-index: 100;
+  width: 0;
+  flex-grow: 1;
+}

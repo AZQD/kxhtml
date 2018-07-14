@@ -1,7 +1,41 @@
 @rem: 75rem;
+body{
+  overflow: hidden;
+}
 .index-wrapper {
 
   .content-box{
-
+    font-size: 0;
+    .partA{
+      .topBox{
+        position: relative;
+        z-index: 300;
+        .topImg{
+          //width: 2701px;
+          //height: 18px;
+        }
+      }
+    }
+    .partB{
+      display: flex;
+      .leftBox{
+        position: relative;
+        z-index: 200;
+        //width: 37px;
+        //height: 500px;
+        .leftImg{
+          //width: 100%;
+        }
+      }
+      .rightBox{
+        position: relative;
+        z-index: 100;
+        width: 0;
+        flex-grow: 1;
+        .rightImg{
+          //width: 2664px;
+        }
+      }
+    }
   }
 }
