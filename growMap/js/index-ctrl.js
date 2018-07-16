@@ -27,7 +27,7 @@ $(function () {
         });
     }
 
-    function animateLeft(moveWidth, time = keyMoveTime, callback) {//移动的宽度, 动画时间，回调函数
+    function animateLeft(moveWidth, time, callback) {//移动的宽度, 动画时间，回调函数
         $topBox.stop(true).animate({
             left: -moveWidth
         }, time * 1000, 'linear');
@@ -38,7 +38,7 @@ $(function () {
         });
     }
 
-    function animateTop(moveHeight, time = keyMoveTime, callback) {//移动的高度, 动画时间，回调函数
+    function animateTop(moveHeight, time, callback) {//移动的高度, 动画时间，回调函数
         $leftBox.stop(true).animate({
             top: -moveHeight
         }, time * 1000, 'linear');
@@ -59,9 +59,9 @@ $(function () {
                 if (leftBtn) {
                     initRightLeft = Math.abs(parseFloat($rightBox.css('left')));
                     if (initRightLeft >= eachColumnLen) {
-                        animateLeft(initRightLeft - eachColumnLen);
+                        animateLeft(initRightLeft - eachColumnLen, keyMoveTime);
                     } else {
-                        animateLeft(0);
+                        animateLeft(0, keyMoveTime);
                     }
                     leftBtn = false;
                     setTimeout(function () {
@@ -73,9 +73,9 @@ $(function () {
                 if (rightBtn) {
                     initRightLeft = Math.abs(parseFloat($rightBox.css('left')));
                     if (initRightLeft + eachColumnLen + WindowLWidth <= $topBox.children('.topImg').width()) {
-                        animateLeft(initRightLeft + eachColumnLen);
+                        animateLeft(initRightLeft + eachColumnLen, keyMoveTime);
                     } else {
-                        animateLeft($topBox.children('.topImg').width() - WindowLWidth);
+                        animateLeft($topBox.children('.topImg').width() - WindowLWidth, keyMoveTime);
                     }
                     rightBtn = false;
                     setTimeout(function () {
@@ -87,9 +87,9 @@ $(function () {
                 if (topBtn) {
                     initRightTop = Math.abs(parseFloat($rightBox.css('top')));
                     if (initRightTop - eachRowLen >= 0) {
-                        animateTop(initRightTop - eachRowLen);
+                        animateTop(initRightTop - eachRowLen, keyMoveTime);
                     } else {
-                        animateTop(0);
+                        animateTop(0, keyMoveTime);
                     }
                     topBtn = false;
                     setTimeout(function () {
@@ -103,9 +103,9 @@ $(function () {
                     let clientHeight = $(window).height() - $topBox.height();
                     let partBHeight = $('.index-wrapper .content-box .partB').height();
                     if (initRightTop + eachRowLen + clientHeight <= partBHeight) {
-                        animateTop(initRightTop + eachRowLen);
+                        animateTop(initRightTop + eachRowLen, keyMoveTime);
                     } else {
-                        animateTop(partBHeight - clientHeight);
+                        animateTop(partBHeight - clientHeight, keyMoveTime);
                     }
                     bottomBtn = false;
                     setTimeout(function () {

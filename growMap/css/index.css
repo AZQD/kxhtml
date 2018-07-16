@@ -1,4 +1,4 @@
-body {
+.index-wrapper {
   overflow: hidden;
 }
 .index-wrapper .content-box {
@@ -6,6 +6,8 @@ body {
 }
 .index-wrapper .content-box .partA .topBox {
   position: relative;
+  top: 0;
+  left: 0;
   z-index: 300;
 }
 .index-wrapper .content-box .partB {
@@ -13,10 +15,14 @@ body {
 }
 .index-wrapper .content-box .partB .leftBox {
   position: relative;
+  top: 0;
+  left: 0;
   z-index: 200;
 }
 .index-wrapper .content-box .partB .rightBox {
   position: relative;
+  top: 0;
+  left: 0;
   z-index: 100;
   width: 0;
   flex-grow: 1;
